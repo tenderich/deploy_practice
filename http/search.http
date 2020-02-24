@@ -1,0 +1,17 @@
+### Variables
+
+#### local 
+@base_url = http://127.0.0.1:8000
+
+
+### 강의 검색하기 ###
+POST {{base_url}}/test
+Content-Type: application/json
+
+{ 
+  "course_code": "ACE20101",
+  "course_name": "",
+  "course_professor": "",
+  "course_semester": "20-1"
+}
+

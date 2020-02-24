@@ -1,0 +1,89 @@
+{%  extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+<div class="search mb-5">
+    <img src="{% static 'image/searchbackground.png' %}" alt="" class="searchimg">
+    <div class="searchpart">
+        <div class="searchline">
+            <div class="searchline1">
+                "어떤 강의 듣지?"
+            </div>
+            <div class="searchline2">
+                알고 싶은 강의를 검색하세요
+            </div>
+            <form action="{% url 'search-course' %}" class="searchline3" method="POST">
+                {% csrf_token %}
+                <img src="{% static 'image/search.PNG' %}" alt="" id="searchicon">
+                <select class="searcharea bg-transparent" id="search_semester" name="course_semester" placeholder="학기">
+                    <option value="1">20-1</option>
+                    <option value="2">19-2</option>
+                    <option value="3">19-1</option>
+                </select>
+                <input type="text" placeholder="과목코드" class="searcharea searcharea2" name="course_code">
+                <input type="text" placeholder="과목명" class="searcharea searcharea2" name="course_name">
+                <input type="text" placeholder="교수명" class="searcharea searcharea2" name="course_professor">
+                <input type="submit" value="search" class="searchbutton">
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% if not search %}
+<div class="container d-flex justify-content-center">
+    <h1>강의를 검색해주세요</h1>
+</div>
+{% else %}
+<div class="course">
+    {% for course in course %}
+    <div id="forres" class="card container" style="width: 18rem; margin: 1.5%;">
+        <a href="{% url 'fetch-course-evaluation' course.id %}" style="color: black;">
+            <div class="card-body">
+                <h5 class="card-title">{{course.course_name}}</h5>
+                <h6 class="card-text">{{course.course_professor}}</h6>
+                <h6 class="card-text">{{course.course_code}}</h6>
+                <br>
+                {% if 'C' in course.course_code and 'S' in course.course_code and 'E' in course.course_code%}
+                <img class="card-img-top" style="width: 50%;" src="{% static 'image/computerscience.PNG' %}" alt="">
+                {% elif 'M' in course.course_code and 'E' in course.course_code and 'N' in course.course_code%}
+                <img class="card-img-top" style="width: 50%;" src="{% static 'image/machine.PNG' %}" alt="">
+                {% elif 'A' in course.course_code and 'C' in course.course_code and 'E' in course.course_code%}
+                <img class="card-img-top" style="width: 50%;" src="{% static 'image/chemistry.PNG' %}" alt="">
+                {% elif 'B' in course.course_code and 'I' in course.course_code and 'O' in course.course_code%}
+                <img class="card-img-top" style="width: 50%;" src="{% static 'image/virus.png' %}" alt="">
+                {% elif 'A' in course.course_code and 'H' in course.course_code and 'S' in course.course_code%}
+                <img class="card-img-top" style="width: 50%;" src="{% static 'image/enable-sound.png' %}" alt="">
+                {% elif 'C' in course.course_code and 'H' in course.course_code and 'M' in course.course_code%}
+                <img class="card-img-top" style="width: 50%;" src="{% static 'image/plastic.png' %}" alt="">
+                {% elif 'T' in course.course_code and 'I' in course.course_code and 'M' in course.course_code%}
+                <img class="card-img-top" style="width: 50%;" src="{% static 'image/data.png' %}" alt="">
+                {% elif 'I' in course.course_code and 'I' in course.course_code and 'D' in course.course_code%}
+                <img class="card-img-top" style="width: 50%;" src="{% static 'image/sketch.png' %}" alt="">
+                {% elif 'M' in course.course_code and 'E' in course.course_code and 'N' in course.course_code%}
+                <img class="card-img-top" style="width: 50%;" src="{% static 'image/science.png' %}" alt="">
+                {% elif 'M' in course.course_code and 'G' in course.course_code %}
+                <img class="card-img-top" style="width: 50%;" src="{% static 'image/data.png' %}" alt="">
+                {% elif 'P' in course.course_code and 'H' in course.course_code and 'Y' in course.course_code%}
+                <img class="card-img-top" style="width: 50%;" src="{% static 'image/physics.PNG' %}" alt="">
+                {% elif 'E' in course.course_code and 'N' in course.course_code and 'E' in course.course_code%}
+                <img class="card-img-top" style="width: 50%;" src="{% static 'image/energy.PNG' %}" alt="">
+                {% elif 'E' in course.course_code and 'S' in course.course_code and 'E' in course.course_code%}
+                <img class="card-img-top" style="width: 50%;" src="{% static 'image/environ.PNG' %}" alt="">
+                {% elif 'M' in course.course_code and 'T' in course.course_code and 'H' in course.course_code%}
+                <img class="card-img-top" style="width: 50%;" src="{% static 'image/math.PNG' %}" alt="">
+                {% elif 'S' in course.course_code and 'C' in course.course_code %}
+                <img class="card-img-top" style="width: 50%;" src="{% static 'image/material.PNG' %}" alt="">
+                {% else %}
+                <img class="card-img-top" style="width: 50%;" src=" {% static 'image/dictionary.png' %} " alt="">
+                {% endif %}
+            </div>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% endblock %}

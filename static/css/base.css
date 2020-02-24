@@ -1,0 +1,81 @@
+.bd-placeholder-img {
+    font-size: 3.5rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+#logo{
+    display: flex;
+    align-items: center;
+    width: 15vw;
+    margin-left: 15vw;
+}
+.duck{
+    margin-left: 1vw;
+    margin-right: 1vw;
+    widows: 3vw;
+}
+.logoline{
+    width: 8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.logoline1{
+    font-size: 12px;
+    color: gray;
+}
+.logoline2{
+    font-size: 24px;
+    font-weight: bold;
+}
+#upline{
+    width: 40vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media(max-width : 700px) {
+    body {
+      height: 100vw;
+    }
+
+    #logo {
+      display: -webkit-inline-box;
+      width: 100vw !important;
+      margin-left: 13vw !important;
+    }
+
+    #upline {
+      font-size: 13px;
+      width: fit-content;
+    }
+
+    .duck {
+      margin-left: 20vw;
+    }
+
+    .logoline {
+      width: 37vw;
+    }
+
+    #res {
+      font-size: 12px;
+    }
+
+    #resfont {
+      font-size: 14px;
+    }
+
+    #res_footer {
+      margin-left: 0px;
+      display: flow-root;
+    }
+  } 
+
+
+ 

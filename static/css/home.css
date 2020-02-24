@@ -1,0 +1,202 @@
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+.search{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.searchimage{
+  width: 100vw;
+  height: 40vh;
+  position: absolute;
+  z-index: 1;
+}
+.searchpart{
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+.searchline1{
+    font-size: 52px;
+    color: white;
+    text-align: center;
+    margin-top: 5vh;
+    font-family: Roboto;
+    font-weight: bold;
+}
+.searchline2{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    margin-top: 2vh;
+    font-family: Roboto;
+    font-weight: 500;
+}
+.searchline3{
+  width: 660px;
+  height: 64px;
+  border-radius: 16px;
+  border: solid 1px #dbdbdb;
+  background-color: #ffffff;
+  margin-top: 4vh;
+  padding: 2px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#searchicon{
+  width: 45px;
+  height: 45px;
+  margin: 5px;
+  padding: 0;
+  object-fit: contain;
+  
+}
+#search_semester{
+  border-left: none;
+}
+.searcharea{
+  padding-inline-start: 25px;
+  width: 130px;
+  height: 20px;
+  padding-top: 3px;
+  border-top: none;
+  border-bottom: none;
+  border-left: none ;
+  border-right: none;
+}
+.searcharea2{
+  border-top: none;
+  border-bottom: none;
+  border-left: gray solid ;
+  border-right: none;
+}
+input:focus {
+  outline: none;
+}
+.searchbutton{
+  background-color: #1abc9c;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 400;
+  /* padding-top: 6px;
+  padding-right: 13px;
+  padding-bottom: 6px;
+  padding-left: 13px; */
+}
+.course{
+  margin-top: 3vh;
+  display: flex;
+  /* width: 80vw; */
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: 6vw;
+  margin-right : 6vw;
+}
+.coursebox{
+  margin-left: 8vw;
+  height: 16vw; 
+  width: 12vw; 
+  margin-top: 5vh;
+  border: 1px solid black;
+}
+
+.coursename{
+  padding-top: 1vh;
+  padding-left: 1vw;
+  font-size: 30px;
+  font-weight: 400;
+  font-family: Roboto;
+}
+.courseid{
+  padding-left: 1vw;
+  font-size: 20px;
+  font-family: Roboto;
+}
+
+.card{
+  border-width: 5px;
+  border-style: solid;
+  border-color:slategray;
+  border-image: initial;
+  border-radius: 0.25rem;
+}
+
+
+@media (max-width: 700px){
+  .resimg{
+    width: 110vw;
+    height : 50vh;
+  }
+  .searchline1{
+    font-size:25px;
+  }
+  .searchline2{
+    font-size:15px;
+    border:white !important;
+  }
+  .searchline3{
+    border-radius:16px;
+    background-color: white;
+    margin-top: 4vh;
+    padding:20px;
+    display:inline-block;
+    justify-content: space-around;
+    inline-size: min-content;
+    height: 240px;
+    margin:15px;
+  }
+
+  #forres{
+    width:9rem !important;
+    height:9rem;
+  }
+
+  .card-title{
+    font-size: 11px;
+  }
+  .card-text{
+    font-size: 8px;
+  }
+  .card-img-top{
+    display: none;
+  }
+  #searchicon{
+    width:25px;
+    height:25px;
+  }
+  .searchbutton{
+    height: 30px;
+    margin-top: 10px;
+  }
+  .searcharea{
+    margin: 5%;
+  }
+  .searcharea2{
+    border:none;
+    margin-bottom: 5px;
+  }
+  .card-body{
+    padding: 0.7rem;
+  }
+}

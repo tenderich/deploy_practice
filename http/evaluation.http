@@ -1,0 +1,42 @@
+### Variables
+
+#### local 
+@base_url = http://127.0.0.1:8000
+
+
+### 강의평가 만들기 ###
+POST {{base_url}}/create-course-evaluation/3
+Content-Type: application/json
+
+{ 
+    "grade" : 5,
+    "review" : "개꿀강의 없나요?",
+    "password" : "1234"
+}
+
+### 강의평가 가져오기 ###
+GET {{base_url}}/fetch-course-evaluation/3
+Content-Type: application/json
+
+### 모달 데이타 가져오기 ###
+GET {{base_url}}/fetch-modal-data/2
+Content-Type: application/json
+
+
+### 강의평가 수정하기 ###
+PUT {{base_url}}/update-course-evaluation/5
+Content-Type: application/json
+
+{
+    "grade" : 1,
+    "review" : "수정했읍니다",
+    "password" : 1234
+}
+
+### 강의평가 삭제하기 ###
+DELETE  {{base_url}}/delete-course-evaluation/2
+Content-Type: application/json
+
+{
+    "password":1234
+}
