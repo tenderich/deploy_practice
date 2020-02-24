@@ -16,7 +16,7 @@
             </div>
             <form action="{% url 'search-course' %}" class="searchline3" method="POST">
                 {% csrf_token %}
-                <img src="{% static 'image/search.PNG' %}" alt="" id="searchicon">
+                <img src="{% static 'image/search.png' %}" alt="" id="searchicon">
                 <select class="searcharea bg-transparent" id="search_semester" name="course_semester" placeholder="학기">
                     <option value="1">20-1</option>
                     <option value="2">19-2</option>
@@ -67,15 +67,15 @@
                 {% elif 'M' in course.course_code and 'G' in course.course_code %}
                 <img class="card-img-top" style="width: 50%;" src="{% static 'image/data.png' %}" alt="">
                 {% elif 'P' in course.course_code and 'H' in course.course_code and 'Y' in course.course_code%}
-                <img class="card-img-top" style="width: 50%;" src="{% static 'image/physics.PNG' %}" alt="">
+                <img class="card-img-top" style="width: 50%;" src="{% static 'image/physics.png' %}" alt="">
                 {% elif 'E' in course.course_code and 'N' in course.course_code and 'E' in course.course_code%}
-                <img class="card-img-top" style="width: 50%;" src="{% static 'image/energy.PNG' %}" alt="">
+                <img class="card-img-top" style="width: 50%;" src="{% static 'image/energy.png' %}" alt="">
                 {% elif 'E' in course.course_code and 'S' in course.course_code and 'E' in course.course_code%}
-                <img class="card-img-top" style="width: 50%;" src="{% static 'image/environ.PNG' %}" alt="">
+                <img class="card-img-top" style="width: 50%;" src="{% static 'image/environ.png' %}" alt="">
                 {% elif 'M' in course.course_code and 'T' in course.course_code and 'H' in course.course_code%}
-                <img class="card-img-top" style="width: 50%;" src="{% static 'image/math.PNG' %}" alt="">
+                <img class="card-img-top" style="width: 50%;" src="{% static 'image/math.png' %}" alt="">
                 {% elif 'S' in course.course_code and 'C' in course.course_code %}
-                <img class="card-img-top" style="width: 50%;" src="{% static 'image/material.PNG' %}" alt="">
+                <img class="card-img-top" style="width: 50%;" src="{% static 'image/material.png' %}" alt="">
                 {% else %}
                 <img class="card-img-top" style="width: 50%;" src=" {% static 'image/dictionary.png' %} " alt="">
                 {% endif %}
