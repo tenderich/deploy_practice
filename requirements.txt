@@ -6,7 +6,7 @@ defusedxml==0.6.0
 diff-match-patch==20181111
 Django==3.0.3
 django-import-export==2.0.2
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 et-xmlfile==1.0.1
 isort==4.3.21
 jdcal==1.4.1
